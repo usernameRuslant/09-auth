@@ -29,6 +29,7 @@
 .navigationItem {
   display: flex;
   align-items: center;
+  text-transform: capitalize;
 }
 
 .navigationLink {

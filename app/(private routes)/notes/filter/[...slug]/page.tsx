@@ -1,4 +1,3 @@
-import { fetchNotes } from '@/lib/api';
 import {
   dehydrate,
   HydrationBoundary,
@@ -8,6 +7,7 @@ import NotesClient from './Notes.client';
 import Section from '@/components/Section/Section';
 
 import { Metadata } from 'next';
+import { fetchNotes } from '@/lib/api/serverApi';
 
 interface NotesProps {
   params: Promise<{ slug: string[] }>;

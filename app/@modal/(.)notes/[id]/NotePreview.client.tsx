@@ -2,11 +2,12 @@
 'use client';
 
 import Section from '@/components/Section/Section';
-import { fetchNotesById } from '@/lib/api';
+
 import { useQuery } from '@tanstack/react-query';
 import { useParams, useRouter } from 'next/navigation';
 import css from './NotePreview.module.css';
 import Modal from '@/components/Modal/Modal';
+import { fetchNotesById } from '@/lib/api/clientApi';
 
 const NotePreview = () => {
   const router = useRouter();

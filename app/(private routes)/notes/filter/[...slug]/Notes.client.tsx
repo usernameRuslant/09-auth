@@ -1,6 +1,5 @@
 'use client';
 
-import { fetchNotes } from '@/lib/api';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
@@ -12,13 +11,13 @@ import Loader from '@/components/Loader/Loader';
 
 import Error from '../../error';
 import Link from 'next/link';
+import { fetchNotes } from '@/lib/api/clientApi';
 
 interface NotesClientProps {
   tag?: string;
 }
 
 const NotesClient = ({ tag }: NotesClientProps) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
 
