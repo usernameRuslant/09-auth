@@ -45,4 +45,12 @@
   .navigationLink {
     display: none;
   }
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

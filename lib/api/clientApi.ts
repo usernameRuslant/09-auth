@@ -63,3 +63,8 @@ export const deleteNote = async (id: string): Promise<Note> => {
   const { data } = await nextServer.delete<Note>(`/notes/${id}`);
   return data;
 };
+
+export const updateUser = async (update: { username: string }) => {
+  const { data } = await nextServer.patch<User>('/users/me', update);
+  return data;
+};

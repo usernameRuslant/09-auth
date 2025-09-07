@@ -25,16 +25,18 @@ const AuthNavigation = () => {
           </li>
           <li className={css.navigationItem}>
             <p className={css.p}>{user?.email}</p>
-            <button
-              type="button"
-              onClick={onClickLogout}
-              className={css.navigationLink}
-            >
-              logout
-            </button>
           </li>
           <li className={css.navigationItem}>
             <TagsMenu />
+          </li>
+          <li className={css.navigationItem}>
+            <button
+              type="button"
+              onClick={onClickLogout}
+              className={css.logoutButton}
+            >
+              logout
+            </button>
           </li>
         </>
       ) : (

@@ -2,7 +2,26 @@ import Image from 'next/image';
 
 import css from './ProfilePage.module.css';
 import { getMe } from '@/lib/api/serverApi';
+import Link from 'next/link';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Profile Page',
+  description: 'User profile page',
+  openGraph: {
+    title: 'Profile Page',
+    description: 'User profile page',
+    url: '/profile',
+    images: [
+      {
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Profile Page',
+      },
+    ],
+  },
+};
 const Profile = async () => {
   const user = await getMe();
   return (
@@ -10,9 +29,9 @@ const Profile = async () => {
       <div className={css.profileCard}>
         <div className={css.header}>
           <h1 className={css.formTitle}>Profile Page</h1>
-          {/* <a src="" className={css.editProfileButton}>
+          <Link href="/profile/edit" className={css.editProfileButton}>
             Edit Profile
-          </a> */}
+          </Link>
         </div>
         <div className={css.avatarWrapper}>
           <Image
