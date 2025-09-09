@@ -21,7 +21,7 @@
   /* height: 100vh; */
   border-right: 1px solid #ddd;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .sidebar {
     /* height: 100%; */
 

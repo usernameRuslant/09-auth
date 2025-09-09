@@ -44,7 +44,7 @@
   color: #ddd;
 }
 .p {
-  white-space: wrap; /* не переносим строки */
-  overflow: hidden; /* скрываем всё, что не помещается */
-  text-overflow: ellipsis; /* добавляем "..." в конце */
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

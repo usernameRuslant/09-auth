@@ -48,9 +48,11 @@
   .header {
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
   }
   .navigation {
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 }

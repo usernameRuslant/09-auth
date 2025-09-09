@@ -25,7 +25,7 @@ const NotesClient = ({ tag }: NotesClientProps) => {
     queryKey: ['notes', page, search, tag],
     queryFn: () => fetchNotes(page, search, tag),
     placeholderData: keepPreviousData,
-    refetchOnMount: false,
+    // refetchOnMount: false,
   });
 
   const onPageChange = (page: number) => {

@@ -43,8 +43,8 @@ const NoteForm = () =>
       mutationFn: createNote,
       onSuccess: () => {
         queryClient.invalidateQueries({ queryKey: ['notes'] });
-        router.back();
         clearDraft();
+        router.back();
         // closeModal();
       },
     });
