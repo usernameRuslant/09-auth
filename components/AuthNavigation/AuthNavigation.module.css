@@ -44,7 +44,10 @@
   color: #ddd;
 }
 .p {
-  white-space: wrap;
+  white-space: normal; /* текст может переноситься */
+  word-wrap: break-word; /* длинные слова/емейлы будут переноситься */
+  overflow-wrap: anywhere; /* альтернатива для длинных слов */
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /* если нужно обрезать и добавить "..." */
+  max-width: 100%; /* не больше родителя */
 }
