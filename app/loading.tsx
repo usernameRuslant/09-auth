@@ -2,7 +2,7 @@
 
 const Loading = () => {
   return (
-    <div>
+    <div style={{ minHeight: '100vh', flex: 1 }}>
       <p>Loading, please wait...</p>
     </div>
   );
